@@ -18,7 +18,14 @@ function somar() {
   if (isANumber(num, num2)) {
     let soma = num + num2
     res.innerHTML = `A soma entre <strong>${num}</strong> e <strong>${num2}</strong> é <strong>${soma}</strong>`
-    res.style.width = '165px'
+
+    if (String(soma).length == 3) {
+      res.style.width = '200px'
+    } else if (String(soma).length == 2) {
+      res.style.width = '180px'
+    } else {
+      res.style.width = '165px'
+    }
   } else {
     res.innerHTML = `Impossível realizar a conta! Por favor, digite um valor <strong>válido</strong>!`
     res.style.width = '440px'
